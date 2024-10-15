@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SUBJECT}}</title> 
+  <style type="text/css">
+     @font-face {
+        font-family: 'apercu-regular-pro';
+        src: url('https://apploi-email-templates.s3.amazonaws.com/apercu-regular-pro.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    body {
+        font-family: 'Apercu-regular-pro';
+    }
+    .header {
+        background: #FAFAFA;
+        border: 1px solid #dfdddf;
+        border-bottom: 0;
+        border-top: 0;
+        text-align: center;
+    }
+    .logo-container {
+      background-image: url("https://apploi-email-templates.s3.amazonaws.com/header-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 133px;
+    }
+    .logo-container .logo {
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: 80px;
+    }
+    .logo-container .logo img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+    .header.content {
+      padding: 20px 15px;
+    }
+    .header .main-text {
+        font-size: 24px;
+        color: #6E7880;
+        font-weight: bold;
+        margin-top: 0;
+    }
+    .header .date {
+        color: #878787;
+        font-size: 13px;
+    }
+    .signature-container {
+    	text-align: center;
+    }
+    .signature-container a.hr-email {
+      	color: #878787 !important;
+        font-size: 12px;
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none !important;
+          
+    }
+    .bodyContainer .mcnTextContent {
+        padding: 23px 49px !important;
+    }
+    .bodyContainer .mcnTextContentContainer .mcnTextContent p {
+        text-align: center;
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .bodyContainer .mcnTextContent p.recruiter-email {
+        color: #878787;
+    }
+    .bodyContainer .mcnTextContent .signature-container {
+        padding-top: 0.5em;
+    }
+    .bodyContainer .mcnTextContent .signature-container p {
+        margin: 5px 0;
+    }
+    .button-container {
+        text-align: center;
+        padding: 8px 0;
+    }
+    .myButton {
+          background-color:#00A1AB;
+          border-radius:4px;
+          display:inline-block;
+          cursor:pointer;
+          color: white !important;
+          font-size:14px;
+          padding:10px 24px;
+          font-weight: bold!important;
+          text-decoration:none !important;
+      }
+    .security-footer {
+      background: white;
+      text-align: center;
+      padding-bottom: 2em;
+      position: relative
+    }
+    .security-footer p {
+      margin: 0;
+      padding: 0 88px;
+    }
+    .security-footer .lock img {
+      width: 100%;
+    }
+    .security-footer .disclaimer {
+      color: #6E7880;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 1.5em;
+      padding-top: 1em;
+    }
+    .footer {
+      background-color: #6E7880;
+      text-align: center;
+      color: white;
+    }
+    .footer > td {
+      padding: 25px 50px;
+    }
+    .footer .apploi-logo {
+      width: 92px;
+      padding-top: 20px;
+      margin-bottom: 10px;
+    }
+    .footer a {
+      color: white;
+    }
+    .terms-and-conditions {
+      font-size: 12px;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    .mcnTextBlock {
+      border-left: 1px solid #dfdddf;
+      border-right: 1px solid #dfdddf;
+    }
+    body,#bodyTable,#bodyCell{
+      height:100% !important;
+      margin:0;
+      padding:0;
+      width:100% !important;
+    }
+    table{
+      border-collapse:collapse;
+    }
+    img, a img{
+      border:0;
+      outline:none;
+      text-decoration:none;
+    }
+    h1, h2, h3, h4, h5, h6{
+      margin:0;
+      padding:0;
+    }
+    p{
+      margin:1em 0;
+      padding:0;
+    }
+    a{
+      word-wrap:break-word;
+    }
+    .ReadMsgBody{
+      width:100%;
+    }
+    .ExternalClass{
+      width:100%;
+    }
+    .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{
+      line-height:100%;
+    }
+    table,td{
+      mso-table-lspace:0pt;
+      mso-table-rspace:0pt;
+    }
+    #outlook a{
+      padding:0;
+    }
+    img{
+      -ms-interpolation-mode:bicubic;
+    }
+    body,table,td,p,a,li,blockquote{
+      -ms-text-size-adjust:100%;
+      -webkit-text-size-adjust:100%;
+    }
+    #bodyCell{
+      padding:20px;
+    }
+    .mcnImage{
+      vertical-align:bottom;
+    }
+    .mcnTextContent img{
+      height:auto !important;
+    }
+    body,#bodyTable{
+      background-color:#F2F2F2;
+    }
+    #bodyCell{
+      border-top:0;
+    }
+    #templateContainer{
+      border:0;
+    }
+    h1{
+      color:#606060 !important;
+      display:block;
+      font-size:40px;
+      font-style:normal;
+      font-weight:bold;
+      line-height:125%;
+      letter-spacing:-1px;
+      margin:0;
+      text-align:left;
+    }
+    h2{
+      color:#404040 !important;
+      display:block;
+      font-size:26px;
+      font-style:normal;
+      font-weight:bold;
+      line-height:125%;
+      letter-spacing:-.75px;
+      margin:0;
+      text-align:left;
+    }
+    h3{
+      color:#606060 !important;
+      display:block;
+      font-size:18px;
+      font-style:normal;
+      font-weight:bold;
+      line-height:125%;
+      letter-spacing:-.5px;
+      margin:0;
+      text-align:left;
+    }
+    h4{
+      color:#808080 !important;
+      display:block;
+      font-size:16px;
+      font-style:normal;
+      font-weight:bold;
+      line-height:125%;
+      letter-spacing:normal;
+      margin:0;
+      text-align:left;
+    }
+    #templatePreheader{
+      background-color:#FFFFFF;
+      border-top:0;
+      border-bottom:0;
+    }
+    .preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{
+      color:#606060;
+      font-size:11px;
+      line-height:125%;
+      text-align:left;
+    }
+    .preheaderContainer .mcnTextContent a{
+      color:#606060;
+      font-weight:normal;
+      text-decoration:underline;
+    }
+    #templateHeader{
+      background-color:#FFFFFF;
+      border-top:0;
+      border-bottom:0;
+    }
+    .headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+      color:#606060;
+      font-size:15px;
+      line-height:150%;
+      text-align:left;
+    }
+    .headerContainer .mcnTextContent a{
+      color:#6DC6DD;
+      font-weight:normal;
+      text-decoration:underline;
+    }
+    #templateBody{
+      background-color:#FFFFFF;
+      border-top:0;
+      border-bottom:0;
+    }
+    .bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+      color:#606060;
+      font-size:15px;
+      line-height:150%;
+      text-align:left;
+    }
+    .bodyContainer .mcnTextContent a{
+      color:#6DC6DD;
+      font-weight:normal;
+      text-decoration:underline;
+    }
+    #templateFooter{
+      background-color:#DFDDDF;
+      border-top:0;
+      border-bottom:0;
+    }
+    .footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+      color:#606060;
+      font-size:11px;
+      line-height:125%;
+      text-align:left;
+    }
+    .footerContainer .mcnTextContent a{
+      color:#606060;
+      font-weight:normal;
+      text-decoration:underline;
+    }
+    @media only screen and (max-width: 480px){
+      body,table,td,p,a,li,blockquote{
+        -webkit-text-size-adjust:none !important;
+      }
+      body{
+        width:100% !important;
+        min-width:100% !important;
+      }
+
+      td[id=bodyCell]{
+        padding:10px !important;
+      }
+
+      table[class=mcnTextContentContainer]{
+        width:100% !important;
+      }
+
+      table[class=mcnBoxedTextContentContainer]{
+        width:100% !important;
+      }
+
+      table[class=mcpreview-image-uploader]{
+        width:100% !important;
+        display:none !important;
+      }
+
+      img[class=mcnImage]{
+        width:100% !important;
+      }
+
+      table[class=mcnImageGroupContentContainer]{
+        width:100% !important;
+      }
+
+      td[class=mcnImageGroupContent]{
+        padding:9px !important;
+      }
+
+      td[class=mcnImageGroupBlockInner]{
+        padding-bottom:0 !important;
+        padding-top:0 !important;
+      }
+
+      tbody[class=mcnImageGroupBlockOuter]{
+        padding-bottom:9px !important;
+        padding-top:9px !important;
+      }
+
+      table[class=mcnCaptionTopContent],table[class=mcnCaptionBottomContent]{
+        width:100% !important;
+      }
+
+      table[class=mcnCaptionLeftTextContentContainer],table[class=mcnCaptionRightTextContentContainer],table[class=mcnCaptionLeftImageContentContainer],table[class=mcnCaptionRightImageContentContainer],table[class=mcnImageCardLeftTextContentContainer],table[class=mcnImageCardRightTextContentContainer]{
+        width:100% !important;
+      }
+
+      td[class=mcnImageCardLeftImageContent],td[class=mcnImageCardRightImageContent]{
+        padding-right:18px !important;
+        padding-left:18px !important;
+        padding-bottom:0 !important;
+      }
+
+      td[class=mcnImageCardBottomImageContent]{
+        padding-bottom:9px !important;
+      }
+
+      td[class=mcnImageCardTopImageContent]{
+        padding-top:18px !important;
+      }
+
+      td[class=mcnImageCardLeftImageContent],td[class=mcnImageCardRightImageContent]{
+        padding-right:18px !important;
+        padding-left:18px !important;
+        padding-bottom:0 !important;
+      }
+
+      td[class=mcnImageCardBottomImageContent]{
+        padding-bottom:9px !important;
+      }
+
+      td[class=mcnImageCardTopImageContent]{
+        padding-top:18px !important;
+      }
+
+      table[class=mcnCaptionLeftContentOuter] td[class=mcnTextContent],table[class=mcnCaptionRightContentOuter] td[class=mcnTextContent]{
+        padding-top:9px !important;
+      }
+
+      td[class=mcnCaptionBlockInner] table[class=mcnCaptionTopContent]:last-child td[class=mcnTextContent]{
+        padding-top:18px !important;
+      }
+
+      td[class=mcnBoxedTextContentColumn]{
+        padding-left:18px !important;
+        padding-right:18px !important;
+      }
+      td[class=mcnTextContent]{
+        padding-right:18px !important;
+        padding-left:18px !important;
+      }
+      table[id=templateContainer],table[id=templatePreheader],table[id=templateHeader],table[id=templateBody],table[id=templateFooter]{
+        max-width:600px !important;
+        width:100% !important;
+      }
+      h1{
+        font-size:24px !important;
+        line-height:125% !important;
+      }
+      h2{
+        font-size:20px !important;
+        line-height:125% !important;
+      }
+      h3{
+        font-size:18px !important;
+        line-height:125% !important;
+      }
+      h4{
+        font-size:16px !important;
+        line-height:125% !important;
+      }
+      table[class=mcnBoxedTextContentContainer] td[class=mcnTextContent],td[class=mcnBoxedTextContentContainer] td[class=mcnTextContent] p{
+        font-size:15px !important;
+        line-height:125% !important;
+      }
+      table[id=templatePreheader]{
+        display:block !important;
+      }
+      td[class=preheaderContainer] td[class=mcnTextContent],td[class=preheaderContainer] td[class=mcnTextContent] p{
+        font-size:12px !important;
+        line-height:115% !important;
+      }
+      td[class=headerContainer] td[class=mcnTextContent],td[class=headerContainer] td[class=mcnTextContent] p{
+        font-size:15px !important;
+        line-height:125% !important;
+      }
+      td[class=bodyContainer] td[class=mcnTextContent],td[class=bodyContainer] td[class=mcnTextContent] p{
+        font-size:15px !important;
+        line-height:125% !important;
+      }
+      td[class=footerContainer] td[class=mcnTextContent],td[class=footerContainer] td[class=mcnTextContent] p{
+        font-size:12px !important;
+        line-height:115% !important;
+      }
+      td[class=footerContainer] a[class=utilityLink]{
+        display:block !important;
+      }
+        .logo-container .logo {
+            height: 50%;
+            background-size: 50px;
+        }
+    }
+  </style>
+</head>
+
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+            <!-- BEGIN TEMPLATE // --> 
+            <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+              <tr>
+                  {{#if COMPANY_PROFILE_LOGO}}
+                  <td>
+                    <div class="logo-container">
+                      <div class="logo" style="background-image: url('{{COMPANY_PROFILE_LOGO}}');">
+                    </div>
+                  </td>
+                  {{/if}}
+                </tr>
+                <tr>
+                    <td>
+                        <div class="header content" style="border-bottom: 1px solid #dfdddf; {{unless COMPANY_PROFILE_LOGO}} border-top: 1px solid #dfdddf; {{/unless}}">
+                            <p class="main-text">
+                                Your Covid-19 Vaccination details
+                            </p>
+                        {{#if DATE}}
+                            <p class="date">{{DATE}}</p>
+                        {{/if}}
+                        </div>
+                    </td>
+                </tr>
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN BODY // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                  <tr>
+                    <td valign="top" class="bodyContainer">
+                      <!-- Begin Body Content -->
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                        <tbody class="mcnTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="mcnTextBlockInner">
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer">
+                                <tbody>
+                                  <tr>
+                                    <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                        <p><b>Hi {{EMPLOYEE_NAME}}, </b></p>
+                                        <p> In line with the new government mandate, we must ensure all our staff are fully vaccinated against Covid-19. Please complete the form below only when you have been fully vaccinated.
+                                        </p>
+                                        <p>
+                                        </p>
+                                        {{#each SIGNING_URLS_BLOCK}}
+                                            <div class="button-container">    
+                                            <a href="{{this.url}}" class="myButton">
+                                                {{#if `SIGNING_URLS_BLOCK_LENGTH == 1`}}
+                                                    Submit Details Now
+                                                {{elseif  `SIGNING_URLS_BLOCK_LENGTH > 1`}}
+                                                Part {{`@index + 1`}}: Onboarding Forms
+                                                {{/if}}
+                                            </a>
+                                            </div>
+                                        {{/each}}
+                                        
+                                        <p>
+                                        <i> What if I haven’t been fully vaccinated yet? </i>
+                                        </p>
+                                        
+                                        <p> Don’t worry! Please bookmark this email and complete once you are fully vaccinated. </p>
+                                        
+                                        <p>Should you have any questions or concerns, please don't hesitate to <a href="mailto:{{HR_EMAIL}}">contact us</a></p>
+                                     <p>Thank you, </p>
+                                     <div class="signature-container">
+                                       <p><b>{{HR_NAME}}</b></p>
+                                       <p>{{COMPANY_NAME}}</p>
+                                       <a class="hr-email" mc:disable-tracking="">{{HR_EMAIL}}</a>
+                                    </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- Begin Social Content -->
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                        <tbody class="mcnTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="mcnTextBlockInner">
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer">
+                                <tbody>
+                                  <tr>            
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END BODY -->
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN FOOTER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
+                  <tr>
+                    <td valign="top" class="footerContainer">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                        <tbody class="mcnTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="mcnTextBlockInner">
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer">
+                                <tbody>
+                                  <tr>
+                                    <td valign="top" class="security-footer">
+                                      <div class="lock">
+                                        <img src="https://apploi-email-templates.s3.amazonaws.com/lock-with-line.png" alt="Lock image"/>
+                                      </div>
+                                        <p class="disclaimer"><b>YOUR INFORMATION IS SAFE & SECURE</b></p>
+                                        <p>
+                                          We take security very seriously. All data you provide is encrypted 
+                                          and stored safely. Your information will be not shared externally.
+                                        </p>
+                                      </td>
+                                    </tr>
+                                    <tr valign="middle" class="footer" align="right">
+                                      <td>
+                                        <b>Powered by</b>
+                                        <br/>
+                                        
+                                        <img class="apploi-logo" alt="apploi-brand" src="https://apploi-email-templates.s3.amazonaws.com/new_logo.png"/>
+                                        <div class="terms-and-conditions">
+                                          <p>
+                                           <a target="_blank" href="https://www.apploi.com/privacy_policy/">Privacy Policy</a>, <a target="_blank" href="https://www.apploi.com/cookie-policy/">Cookie Policy</a> and <a target="_blank" href="https://www.apploi.com/terms-conditions/">Terms and Conditions</a>
+                                          </p>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END FOOTER -->
+              </td>
+            </tr>
+          </table>
+        <!-- // END TEMPLATE -->
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
