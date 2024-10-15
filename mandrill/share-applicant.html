@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>*|SUBJECT|*</title>
+  <title>*|SUBJECT|*</title> 
   <style type="text/css">
     body,#bodyTable,#bodyCell{
       height:100% !important;
@@ -11,6 +11,31 @@
       padding:0;
       width:100% !important;
     }
+              .body-table {
+            border-right: 1px solid #EBEBEB;
+            border-left: 1px solid #EBEBEB;
+            background-color: #FAFAFA;
+        }
+
+        .logo-container {
+            background-image: url("https://apploi-email-templates.s3.amazonaws.com/header-bg-bell-min-2.png");
+            background-repeat: no-repeat;
+            background-size: 100% 125px;
+            height: 104px;
+            margin-top: 20px;
+        }
+
+        .logo-container .logo {
+            background-repeat: no-repeat;
+            height: 100%;
+            background-position: center;
+            background-size: 80px;
+        }
+
+        .logo-container .logo img {
+            max-height: 100%;
+            max-width: 100%;
+        }
     table{
       border-collapse:collapse;
     }
@@ -335,6 +360,44 @@
       }
     }
   </style>
+      <style type="text/css">
+    .security-footer {
+      background: white;
+      text-align: center;
+      padding-bottom: 2em;
+      position: relative
+    }
+    .security-footer p {
+      margin: 0;
+      padding: 0 88px;
+    }
+    .security-footer .lock img {
+      width: 100%;
+    }
+    .security-footer .disclaimer {
+      color: #6E7880;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 1.5em;
+      padding-top: 1em;
+    }
+    .footer {
+      background-color: #6E7880;
+      text-align: center;
+      color: white;
+    }
+    .footer>td {
+      padding: 25px 50px;
+    }
+    .footer .apploi-logo {
+      width: 92px;
+      padding-top: 20px;
+      margin-bottom: 10px;
+    }
+    .footer a {
+      color: white;
+    }
+  </style>
 </head>
 
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
@@ -342,42 +405,18 @@
     <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
       <tr>
         <td align="center" valign="top" id="bodyCell">
-          <!-- BEGIN TEMPLATE // -->
+          <!-- BEGIN TEMPLATE // --> 
             <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer" style="border: 1px solid #dfdddf;">
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN HEADER // -->
                 <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
-                  <tr>
-                    <td valign="top" class="headerContainer">
-                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock">
-                        <tbody class="mcnImageBlockOuter">
-                          <tr>
-                            <td valign="top" style="padding:0px" class="mcnImageBlockInner">
-                              <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer">
-                                <tbody>
-                                  <tr>
-                                    <td class="mcnImageContent" valign="top" style="padding-right: 0px;
-										padding-left: 0px; padding-top: 0; padding-bottom: 0;">
-                                        *|IF:MULTIPLE == true|*
-                                        <img align="left" alt="You Have Shared Applicants" src="https://gallery.mailchimp.com/70710b03c5f3c638695f9e90f/images/35d1eab7-d253-490c-9c52-e87d8ccd30c4.png" width="600" style="max-width:600px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                        *|ELSE:|*
-                                        <img align="left" alt="You Have a Shared Applicant" src="https://gallery.mailchimp.com/70710b03c5f3c638695f9e90f/images/35d1eab7-d253-490c-9c52-e87d8ccd30c4.png" width="600" style="max-width:600px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                        *|END:IF|*
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                        <tr>
+                            <td>
+                                <div class="logo-container">
+                                    <div></div>
                             </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-                <!-- // END HEADER -->
-              </td>
-            </tr>
+                        </tr>
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN BODY // -->
@@ -390,14 +429,60 @@
                           <tr>
                             <td valign="top" class="mcnTextBlockInner">
                               <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer">
-                                <tbody>
+                                <tbody class="body-table">
                                   <tr>
                                     <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
-                                        <br>
-                                        <div mc:edit="content"></div><br><br>
-                                        <div mc:edit="applicantList"></div>
 
+                                        *|IF:V2_ENABLED|*
 
+                                        <p>Hi,</p>
+
+                                        <p><strong>*|SENDER_FULL_NAME|*</strong> has shared an application from <strong>*|CANDIDATE_FULL_NAME|*</strong> for <strong>*|JOB_NAME|*</strong> at <strong>*|COMPANY_NAME|*</strong>*|IF:NOTE|* with the following note*|END:IF|*:</p>
+
+                                        *|IF:NOTE|*
+
+                                        *|NOTE|*
+
+                                        *|END:IF|*
+
+                                        <p><a href="*|CANDIDATE_URL|*"><strong>View Candidate</strong></a></p>
+                                        
+                                        <p>If you’re not logged in to Apploi, you can view the <a href="*|PDF_LINK|*"><strong>Application Summary</strong></a> as a PDF instead. This link will expire in 7 days.</p>
+
+                                        *|ELSE:|*
+
+                                        *|IF:OLD_CONTENT|*
+                                        
+                                        *|OLD_CONTENT|*
+                                        
+                                        *|END:IF|*
+
+                                        *|END:IF|*
+                                        
+                                        <p>Best,<br>
+                                        <strong>Team Apploi</strong></p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- Begin Social Content -->
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                        <tbody class="mcnTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="mcnTextBlockInner">
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer">
+                                <tbody>
+                                  <tr>            
+                                    <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">      
+                                  <span style="color:#666">
+                                               <strong>Love Apploi?</strong>
+                                          Follow us on <a href="https://www.linkedin.com/company/apploi" target="_blank">LinkedIn</a> 
+                                          and rate us on <a href="https://www.capterra.com/p/167877/Apploi" target="_blank">Capterra</a></span>.
+                                   
                                     </td>
                                   </tr>
                                 </tbody>
@@ -415,34 +500,39 @@
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN FOOTER // -->
-                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
-                  <tr>
-                    <td valign="top" class="footerContainer">
-                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
-                        <tbody class="mcnTextBlockOuter">
-                          <tr>
-                            <td valign="top" class="mcnTextBlockInner">
-                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer">
-                                <tbody>
-                                  <tr>
-                                    <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
-                                      <em>Copyright © 2016 Apploi, All rights reserved.</em><br><br>
-                                      26 Broadway, 8th Floor
-                                      New York, NY 10004
-                                    </td>
-                                      <td valign="middle" align="right">
-                                          <img alt="Apploi Logo" src="https://s3.amazonaws.com/apploi-email-templates/Apploi%2BLogo.png" height="50" width="50" style="height: 50px; width: 50px; vertical-align: middle; padding-left: 9px; padding-right: 9px; text-align: center;">
-                                      </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
+                      <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
+                        <tr>
+                          <td valign="top" class="footerContainer">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                              <tbody class="mcnTextBlockOuter">
+                                <tr>
+                                  <td valign="top" class="mcnTextBlockInner" style="border-top: 0;">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="604" class="mcnTextContentContainer">
+                                      <tbody style="font-family: Helvetica">
+                                        <tr valign="middle" class="footer" align="right">
+                                          <td>
+                                            <b>Powered by</b>
+                                            <br/>
+
+                                            <img class="apploi-logo" alt="apploi-brand" src="https://apploi-email-templates.s3.amazonaws.com/new_logo.png"/>
+                                            <div class="terms-and-conditions">
+                                              <p>
+                                                <a target="_blank" href="https://www.apploi.com/privacy_policy/">Privacy
+                                                  Policy</a>, <a target="_blank" href="https://www.apploi.com/cookie-policy/">Cookie Policy</a> and <a target="_blank" href="https://www.apploi.com/terms-conditions/">Terms
+                                                  and Conditions</a>
+                                              </p>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
                       </table>
-                    </td>
-                  </tr>
-                </table>
                 <!-- // END FOOTER -->
               </td>
             </tr>
